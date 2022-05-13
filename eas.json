@@ -1,0 +1,40 @@
+{
+  "build": {
+    "release": {},
+    "development": {
+      "distribution": "internal",
+      "android": {
+        "gradleCommand": ":app:assembleDebug"
+      },
+      "ios": {
+        "buildConfiguration": "Debug"
+      }
+    },
+    "dev-apk": {
+      "distribution": "internal",
+      "releaseChannel": "dev-apk-rc",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "RUN_ENV_NAME": "devapk"
+      }
+    },
+    "dev-client": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": {
+        "RUN_ENV_NAME": "devclient"
+      },
+      "ios": {
+        "simulator": true
+      },
+      "cache": {
+        "key": "abc"
+      }
+    }
+  },
+  "cli": {
+    "version": ">= 0.35.0"
+  }
+}
